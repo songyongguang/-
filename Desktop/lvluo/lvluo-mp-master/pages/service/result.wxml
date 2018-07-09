@@ -1,0 +1,11 @@
+<!--pages/service/result.wxml-->
+<view class='resultpage'>
+  <view>
+    <image src='image/correct.png'></image>
+    <text>提交成功</text>
+  </view>
+  <view>
+    <text>稍后客服向您致电，谢谢！</text>
+  </view>
+  <button bindtap='back'> 知道了</button>
+</view>

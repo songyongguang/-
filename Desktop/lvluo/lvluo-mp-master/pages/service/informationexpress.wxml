@@ -1,0 +1,32 @@
+<!--pages/service/informationexpress.wxml-->
+<view class='indexPage'>
+  <view class='bgi'>
+    <image src='image/bg.jpg' mode='scaleToFill'></image>
+  </view>
+  <view class='box'>
+    <view class='text'>
+      <view class='text-content'>
+        <text>选择了身份,提交准确的资料</text>
+        <text>绿萝，时刻为您服务</text>
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='entrance' bindtap='agententrance'>
+      <span>
+         <image src='image/agent.png'></image>
+      </span>  
+      <text>经纪人入口</text>
+    </view>
+    <view class='entrance' bindtap='cliententrance'>
+      <span>
+        <image src='image/client.png'></image>
+       </span>
+      <text>客户入口</text>
+    </view>
+  </view>
+  <view class='buttom'>
+    <text>注：</text> 
+    <text> 如果您是金融从业人员，可选择经纪人入口可以替客户提交资料。如果你是为自己提交资料，请选择客户入口。      </text>  
+  </view>
+</view>

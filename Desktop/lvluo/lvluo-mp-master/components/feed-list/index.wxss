@@ -1,0 +1,26 @@
+/* components/feed/index.wxss */
+@import './../ui-block.wxss';
+
+.ui-feed-list-main .ui-feed {
+  padding: 13rpx 16rpx;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin-bottom: 15rpx;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+}
+
+.ui-feed-list-main .ui-feed-title {
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+.ui-feed-list-main .ui-feed-main {
+  display: flex;
+}
+.ui-feed-list-main .ui-feed-main image {
+  width: 210rpx;
+}
+
+.ui-feed-list-main .ui-feed-main .ui-feed-info {
+  flex: 1;
+  margin-left: 20rpx;
+}

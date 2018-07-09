@@ -1,0 +1,91 @@
+/* pages/service/clientinformationexpress.wxss */
+/* pages/service/agentinformationexpress.wxss */
+.serverpage{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10px 5% 10px 5%;
+}
+input{
+  border: 1px solid  rgba(0, 0, 0, .3);
+  border-radius: 5%;
+}
+.top view{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+.top view span{
+  width: 5px;
+  height: 30px;
+  background-color: #1AAD19;
+  margin-right: 5%;
+}
+.content{
+  margin-top: 10px;
+}
+.content view:nth-child(1),.content view:nth-child(2){
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+.content view:nth-child(1) span{
+   width: 5px;
+  height: 30px;
+  background-color: #1AAD19;
+  margin-right: 5%;
+}
+.form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+}
+.form view{
+  width: 61%;
+  margin-right: 2%;
+
+}
+textarea{
+  border:  1px solid  rgba(0, 0, 0, .3);
+  width: 100%;
+  border-radius: 5%;
+}
+button{
+  width: 60%;
+  background-color: #1AAD19;
+  margin-top: 10px;
+}
+.propetry{
+  width: 100%;
+  display: block;
+  margin: 5% 0;
+} 
+.information,.upload {
+  display: block;
+  width: 100%;
+  margin: 5% 0;
+}
+.propetry image,.information image,.upload image{
+width: 20%;
+height: 80px;
+margin-right: 10%;
+}
+.status,.otherstate{
+  margin-top: 15%;
+}
+
+.form picker {
+   width: 100%;
+}
+.picker {
+   position: relative;
+   width: 100%;
+   height: 60rpx;
+  border:  1px solid  rgba(0, 0, 0, .3);
+}
+.picker image{
+  position: absolute;
+  right: 10rpx;
+  top: 25rpx;
+}

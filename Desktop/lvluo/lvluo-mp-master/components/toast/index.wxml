@@ -1,0 +1,6 @@
+<view class="ui-toast {{ visible ? 'ui-toast-show' : '' }} toast-theme-{{ theme }} {{ externalClasses }}">
+  <view class="ui-toast-inner">
+    <image src="/images/{{ status }}-white.svg" class="ui-icon toast-{{ status }}"></image>
+    <view wx:if="{{ message && message.length !== 0 }}" class="ui-toast-inner-mess">{{ message }}</view>
+  </view>
+</view>

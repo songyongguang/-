@@ -1,0 +1,13 @@
+<!--pages/news/newsdetail.wxml-->
+<view class='newsdetailPage'>
+   <view>
+        <span>{{data.title}}</span>
+        <span>{{data.pushTime}}</span>
+   </view>
+   <view>
+        <image src='{{data.photo}}'></image>
+   </view>
+   <view>
+        <text>{{data.intro}}</text>
+   </view>
+</view>

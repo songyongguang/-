@@ -1,0 +1,129 @@
+/* pages/contact/conpany introduce.wxss */
+.newsPage{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+text{
+  display: block;
+  text-indent: 2rem;
+  font-size: 20px;
+}
+.p{
+  text-indent: 0rem;
+}
+image{
+  width: 100%;
+}
+
+.buttom{
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.buttom .buttom_view .span{
+  width: 5px;
+  height: 30px;
+  background-color: green;
+  display: inline-block;
+  margin-left: 5%;
+}
+.buttom .buttom_view{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30px;
+}
+.buttom .buttom_view text{
+  height: 30px;
+  line-height: 30px;
+  text-indent: 1rem;
+}
+.buttom .name{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+.buttom .name span{
+  width: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 50px;
+  line-height: 50px;
+}
+.buttom .name view{
+  display: flex;
+  flex-direction: row;
+  /* width: 50%; */
+}
+.buttom .name view view{
+   width: 50%;
+}
+  input{
+  width: 100%;
+}
+.buttom .name .radio {
+ margin-left: 8rpx;
+}
+.radio-group{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.buttom .phone{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+   width: 100%;
+   margin-top: 10px;
+}
+.buttom .phone span{
+  width: 15%;
+  margin-left: 5%;
+  margin-right: 2.5%; 
+  height: 50px;
+  line-height: 50px;
+}
+.buttom .phone view{
+  
+  width: 50%;
+}
+.buttom .check{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+}
+.buttom .check span{
+  width: 15%;
+  margin-left: 5%;
+  margin-right: 2.5%;
+  height: 50px;
+  line-height: 50px;
+}
+.buttom .check view{
+   width: 50%;
+}
+input{
+  border: 1px solid gray;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+}
+textarea{
+  width: 90%;
+  margin: 20px auto;
+  border: 1px solid gray;
+  border-radius: 3%;
+  padding: 5px 5px;
+
+}
+.confirm{
+  width: 60%;
+  background-color:#1AAD19;  
+}

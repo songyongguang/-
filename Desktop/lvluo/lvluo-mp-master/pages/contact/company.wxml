@@ -1,0 +1,61 @@
+<!--pages/contact/conpany introduce.wxml-->
+<view class='newsPage'>
+  <view class='top'>
+    <image src='./image/introduce.png'></image>
+  </view>
+  <view class='content'>
+    <text>
+      <label>绿萝（天津）科技发展有限公司，</label>2018年3月8号注册于天津开发区，注册资本200万元，是一家民营性质的高科技的互联网平台公司，现有10余员工，90%以上具有本科及以上学历。公司的目标是为中国中小微企业提供优质的经营解决方案的综合服务商，公司的核心价值是诚信 高效 创新，一切从客户的需求出发，希望通过专业和高效执行，助力中小微企业走上发展的快车道。公司整合金融和法律相关资源，打造双赢局面，致力于为中小微企业提供金融咨询、法律咨询等线上和线下结合的专业咨询解决方案。我们相信，通过不断地努力和追求，一定能够实现各方资源同中小微企业的互利共赢。建设优质的中小微企业融资和法律的共享平台。
+    </text>
+    <view>
+      <image src='./image/map.png'></image>
+    </view>
+    <view>
+      <text class='p'>天津市滨海新区天津经济开发区</text>
+      <text class='p'>洞庭路58号 融汇大厦2楼207</text>
+      <text class='p'>邮    编：300457</text>
+      <text class='p'>公司电话：022-25296626</text>
+    </view>
+  </view>
+  <view class='buttom'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='buttom_view'>
+        <span class="span"></span>
+        <text>立刻咨询</text>
+      </view>
+      <view class='name'>
+        <span>称呼</span>
+        <view>
+          <view>
+              <input type='text' name='name' placeholder='怎么称呼您'></input>
+          </view>
+          <view class="radio">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label wx:for="{{items}}">
+                <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+              </label>
+            </radio-group>
+          </view>
+         
+        </view>
+      </view>
+      <view class='phone'>
+        <span>手机</span>
+        <view>
+          <input type='text' name='phone' placeholder='您的联系电话'></input>
+        </view>
+        <button bindgetphonenumber='' style='background-color:#1AAD19'>验证码</button>
+      </view>
+      <view class='check'>
+        <span>验证</span>
+        <view>
+          <input placeholder='填写您的验证码'></input>
+        </view>
+      </view>
+      <view>
+        <textarea name='otherDesc' placeholder='您需要说明您预计用款时间、期望贷款利率，我们好为您推荐合适您的产品，这样可以提高我们为您服务的质量和效率'></textarea>
+      </view>
+      <button  formType="submit" class='confirm'>确认</button>
+    </form>
+  </view>
+</view>

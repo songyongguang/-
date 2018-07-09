@@ -1,0 +1,27 @@
+<!--components/company/index.wxml-->
+<view class="ui-block ui-company">
+  <view class="ui-block-header ui-company-header"
+    wx:if="{{ displayName }}">
+    <view class='ui-block-title'>
+      {{ displayName }} 
+    </view>
+  </view>
+  <!-- <view class="ui-list-main"
+    wx:if="{{ data && data.length > 0 }}">
+    <block wx:for="{{ data }}" wx:for-item="item" wx:key="index">
+      <view class="ui-list-item" bindtap='goto'>
+        <image src="{{ item.photo }}"
+          mode="widthFix" id='{{data.id}}' show='{{data.showOrder}}'></image>
+      </view>
+    </block>
+  </view> -->
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{data}}">
+      <swiper-item>
+        <image src="{{item.photo}}"  mode="widthFix" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+

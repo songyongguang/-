@@ -1,0 +1,42 @@
+/* pages/service/index.wxss */
+.serverpage{
+  width: 100%;
+  margin: 5% 5% 5% 5%;
+}
+a{
+  display:block;
+  width: 30%;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  color:  blue;
+  text-decoration: underline;
+}
+.serverpage view{
+  width: 100%;
+}
+.serverpage view span{
+  display: inline-block;
+  width: 5px;
+  height: 30px;
+  margin-right: 5%;
+  background-color: #1AAD19;
+}
+.serverpage view text{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 30px;
+}
+.serverpage view image {
+  display: inline-block;
+  width: 43%;
+  height:150px;
+  
+}
+.serverpage view image:nth-child(1){
+  margin-right: 4%;
+}
+.serverpage view image:nth-child(3){
+  margin-top: 5px;
+}
+

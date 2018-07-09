@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "绿萝服务",
+  "usingComponents": {
+    "toast": "/components/toast/index",
+    "loading": "/components/loading/index",
+    "banner": "/components/banner/index",
+    "list": "/components/list/index",
+    "feed-list": "/components/feed-list/index"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "绿萝金融",
+  "usingComponents": {
+    "toast": "/components/toast/index",
+    "loading": "/components/loading/index",
+    "banner": "/components/banner/index",
+    "company": "/components/company/index",
+    "list": "/components/list/index",
+    "feed-list": "/components/feed-list/index"
+  }
+}

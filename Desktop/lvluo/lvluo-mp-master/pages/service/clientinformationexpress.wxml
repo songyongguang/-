@@ -1,0 +1,170 @@
+<!--pages/service/clientinformationexpress.wxml-->
+<!--pages/service/agentinformationexpress.wxml-->
+<view class='serverpage'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='top'>
+      <text>提示：“*”代表必填项</text>
+      <view>
+        <span></span>
+        <text>咨询产品*</text>
+       </view>
+       <picker bindchange="bindPickerChange5" name="consultFromName" value="{{consultFromName[index5]}}" range="{{consultFromName}}">
+        <view class="picker" style='width:100%;height:60rpx;'>
+           {{consultFromName[index5]}}
+        <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+        </view>
+      </picker>
+    </view>
+     <view>
+        <view>
+        <span></span>
+        <text>人员类别*</text>
+       </view>
+      <picker bindchange="bindPickerChange8" name="customerType" value="{{customerType[index8]}}" range="{{customerType}}">
+        <view class="picker" style='width:100%;height:60rpx;'>
+                    {{customerType[index8]}}
+          <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='content'>
+        <view>
+          <span></span>
+          <text>借款人信息</text>
+       </view>
+       <text>家庭信息</text>
+       <view class='form'>
+          <text decode="{{true}}">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名*：&nbsp;</text>
+          <view>
+            <input name="name" type='text'></input>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄*：&nbsp;</text>
+          <view>
+            <picker bindchange="bindPickerChange3" name="age" value="{{ageArr[index3]}}" range="{{ageArr}}">
+              <view class="picker" style='width:100%;height:60rpx;'>
+                  {{ageArr[index3]}}
+                <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+              </view>
+            </picker>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：&nbsp;</text>
+          <view>
+           <picker bindchange="bindPickerChange1" name="gender" value="{{sexArr[index1]}}" range="{{sexArr}}">
+              <view class="picker" style='width:100%;height:60rpx;'>
+                  {{sexArr[index1]}}
+                <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+              </view>
+            </picker>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机*：&nbsp;&nbsp;</text>
+          <view>
+            <input name="phone" type='phone'></input>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">身份证号*：&nbsp;&nbsp;</text>
+          <view>
+              <input name="customerIdentity" type='IDcard'></input>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">婚&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;否：&nbsp;&nbsp;</text>
+          <view>
+             <picker bindchange="bindPickerChange2" name="maritalStatus" value="{{marryArr[index2]}}" range="{{marryArr}}">
+              <view class="picker" style='width:100%;height:60rpx;'>
+                  {{marryArr[index2]}}
+                <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+              </view>
+            </picker>
+          </view>
+       </view>
+       <view class='form'>
+          <text decode="{{true}}">子&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女：&nbsp;&nbsp;</text>
+          <view>
+           <picker bindchange="bindPickerChange4" name="hasChild" value="{{hasChild[index4]}}" range="{{hasChild}}">
+              <view class="picker" style='width:100%;height:60rpx;'>
+                  {{hasChild[index4]}}
+                <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+              </view>
+            </picker>
+          </view>  
+       </view>
+       <view>
+          <text>上传相关资料材料：</text>
+          <view class='upload' >
+             <image wx:for="{{array3}}" src='{{item.src}}' bindtap='chooseImg'></image>
+          </view>
+       </view>
+       <view class='status'>
+          <text>企业情况</text>
+          <view class='form'>
+            <text>企业名称*:</text>
+            <view>
+              <input name="companyName" type='text'></input>
+            </view>
+          </view>
+          <view class='form'>
+            <text>主营范围*:</text>
+            <view>
+              <input name="bizScope" type='text'></input>
+            </view>
+          </view>
+          <view class='form'>
+            <text>企业行业：</text>
+            <view>
+             <picker bindchange="bindPickerChange6" name="companyIndustry" value="{{companyIndustry[index6]}}" range="{{companyIndustry}}">
+              <view class="picker" style='width:100%;height:60rpx;'>
+                  {{companyIndustry[index6]}}
+                <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+              </view>
+            </picker>
+            </view>
+          </view>
+          <view class='form'>
+            <text>从业年限：</text>
+            <view>
+            <picker bindchange="bindPickerChange7" name="companyLife" value="{{companyLife[index7]}}" range="{{companyLife}}">
+                <view class="picker" style='width:100%;height:60rpx;'>
+                    {{companyLife[index7]}}
+                  <image src='image/select.jpg' style='width:30rpx;height:30rpx;'></image>
+                </view>
+              </picker>
+            </view>
+          </view>
+          <view class='form'>
+            <text >年限售收入*：</text>
+            <view>
+              <input name="salesIncome"></input>
+            </view>
+          </view>
+          <view class='propetry'>
+            <image  wx:for="{{array1}}" src='{{item.src}}' bindtap='chooseImg'></image>
+          </view>
+          <view>
+            <text>第三方信息</text>
+            <view class='information'>
+              <image  wx:for="{{array2}}" src='{{item.src}}' bindtap='chooseImg'></image>
+            </view>
+          </view>
+          <view class='otherstate'>
+            <view>
+              <span></span>
+              <text>其他情况说明</text>
+            </view>
+            <textarea name="otherDesc" placeholder='您需要说明您预计用款时间，期望贷款利率，我们好为您推荐合适您的产品，这样可以提高我们为您服务的质量和效率'></textarea>
+          </view>
+       </view>
+    </view>
+    <view class='buttom'>
+      <button formType="submit" bindtap='go'>提交</button>
+    </view>
+  </form>
+</view>
+
+

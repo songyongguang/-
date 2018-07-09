@@ -1,0 +1,23 @@
+/* 一些项目中通用的 css */
+
+.green {
+  color: #1AAD19;
+}
+.green-dark {
+  color: #179B16;
+}
+.green-light {
+  color: #9ED99D;
+}
+.gray {
+  color: rgba(0, 0, 0, .2);
+}
+.gray-dark {
+  color: rgba(0, 0, 0, .3);
+}
+.black {
+  color: #000;
+}
+.white {
+  color: #fff;
+}

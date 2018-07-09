@@ -1,0 +1,41 @@
+<!--pages/service/credit.wxml-->
+ <view class='newsPage'>
+  <scroll-view class='index-main'
+    scroll-x="false"
+    scroll-y="true"
+    enable-back-to-top="true">  
+    <!-- pending -->
+       <loading wx:if="{{ fetchStatus == 'pending' }}" />   
+
+     <!-- success -->
+      <toast visible="{{ fetchStatus == 'success' }}"
+        message="加载成功"
+        duration="1000"
+        status="success"
+        theme="dark"></toast>
+    <block wx:if="{{ pageData && pageData.length > 0 }}"
+      wx:for="{{ pageData }}" wx:for-item="item" wx:key="index">
+      <view class="banner-wrapper"
+         wx:if="{{ item.type === 'banner' }}">
+         <!-- <banner displayName="{{ item.displayName }}"
+          data="{{ item.data }}"></banner>   -->
+          <view >
+            <image src='{{item.data.photo}}'bindtap='gotoservicedetail' data-id="{{item.data.id}}" mode='widthFix'></image>
+          </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>    
+
+ <!-- for 循环 -->
+ <!-- <view class='indexPage'>
+  <view>
+    <block wx:for="{{arrey}}"  wx:for-item="item"  wx:key="index">
+        <view class=''>
+            <image src='' style='width:40%;height:200px;'></image>
+        </view>
+    </block>
+  </view>
+</view>   -->
+
+  

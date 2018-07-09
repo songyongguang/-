@@ -1,0 +1,54 @@
+
+ <!-- <view class='newsPage'>
+  <scroll-view class='index-main'
+    scroll-x="false"
+    scroll-y="true"
+    enable-back-to-top="true"> -->
+    <!-- pending -->
+      <!-- <loading wx:if="{{ fetchStatus == 'pending' }}" />   -->
+
+    <!-- success -->
+     <!-- <toast visible="{{ fetchStatus == 'success' }}"
+        message="加载成功"
+        duration="1000"
+        status="success"
+        theme="dark"></toast>
+    <block wx:if="{{ pageData && pageData.length > 0 }}"
+      wx:for="{{ pageData }}" wx:for-item="item" wx:key="index">
+      <view class="banner-wrapper"
+        wx:if="{{ item.type === 'banner' }}">
+        <banner displayName="{{ item.displayName }}"
+          data="{{ item.data }}"></banner>
+      </view>
+    </block>
+  </scroll-view>
+</view>   -->
+
+ <!-- for 循环 -->
+<!-- <view class='indexPage'>
+  <view>
+    <block wx:for="{{arrey}}"  wx:for-item="item"  wx:key="index">
+        <view class=''>
+            <image src='' style='width:40%;height:200px;'></image>
+        </view>
+    </block>
+  </view>
+</view>  -->
+
+ <view class='serverpage'>
+    <view>
+      <a bindtap="information">资料速递</a>
+    </view>
+
+  <view>
+    <view style='height:30px;line-height:30px;width:100%;display:flex;'>
+      <span></span>
+      <text>服务类别</text>
+    </view>
+    <view style='margin-top:10px;'>
+      <image wx:for="{{img}}"  src='{{item.coverImage}}' data-id='{{item.id}}' bindtap='server'></image>
+      <!-- <image src='image/photo2.png'bindtap='server2'></image>
+      <image src='image/photo3.png'bindtap='server3'></image>  -->
+    </view>
+  </view>
+</view>  

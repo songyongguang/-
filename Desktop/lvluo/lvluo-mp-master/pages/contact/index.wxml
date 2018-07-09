@@ -1,0 +1,48 @@
+<!--pages/contact/index.wxml-->
+ <!-- <scroll-view class='contactPage'>  -->
+  <scroll-view class='index-main'
+    scroll-x="false"
+    scroll-y="false"
+    enable-back-to-top="false">
+    <view class='top'>
+        <image src='image/bg.jpg' mode='scaleToFill'></image>
+        <view class='inof'>
+          <open-data type="userAvatarUrl"></open-data>
+          <open-data type="userNickName"></open-data>
+        </view>
+    </view>
+    <view class='content_top'>
+      <view>
+        <text>{{number1}}</text>
+        <text>推荐咨询业务数</text>
+      </view>
+      <view>
+         <text>{{number2}}</text>
+         <text>推荐提交业务数</text>
+      </view>
+    </view>
+    <view class='content_middle'>
+      <view  bindtap='introduce'>
+        <view>
+          <image class='photo1' src='image/mine1.png'></image>
+        </view>
+        <view>公司介绍</view>
+        <view> <image class='photo2' src='image/more.png'></image></view>
+      </view>
+      <view bindtap='joinus'>
+         <view>
+          <image class='photo1' src='image/mine2.png'></image>
+        </view>
+        <view>加入我们</view>
+        <view> <image class='photo2'src='image/more.png'></image></view>
+      </view>
+      <view bindtap='declare'>
+         <view>
+          <image class='photo1' src='image/mine3.png'></image>
+        </view>
+        <view>免责声明</view>
+        <view> <image  class='photo2'src='image/more.png'></image></view>
+      </view>
+    </view>
+  </scroll-view>
+ <!-- </scroll-view>  -->

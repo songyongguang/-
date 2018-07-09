@@ -1,0 +1,48 @@
+<!--pages/index/index.wxml-->
+<view class='indexPage'>
+  <scroll-view class='index-main'
+    scroll-x="false"
+    scroll-y="true"
+    enable-back-to-top="true">
+    <!-- pending -->
+    <!-- 即将运行 -->
+     <!-- <loading wx:if="{{ fetchStatus == 'pending' }}" />  -->
+
+    <!-- success -->
+     <!-- <toast visible="{{ fetchStatus == 'success' }}"
+        message="加载成功"
+        duration="1000"
+        status="success"
+        theme="dark"></toast>  -->
+
+    <block wx:if="{{ pageData && pageData.length > 0 }}"
+      wx:for="{{ pageData }}" wx:for-item="item" wx:key="index">
+      <view class="banner-wrapper"
+        wx:if="{{ item.categoryType === 'SERVICE' }}">
+        <banner displayName="{{ item.name }}"
+          data="{{ item.data }}"></banner>
+      </view>
+       <!-- <view class="list-banner"
+        wx:if="{{ item.type === 'company' }}">
+        <company displayName="{{ item.displayName }}"
+          data="{{ item.data }}"></company>
+      </view>  -->
+       <view class="company-banner"
+        wx:if="{{ item.type === 'company' }}">
+        <company displayName="{{ item.name }}"
+          data="{{ item.data }}"></company>
+      </view> 
+      <view class="list-banner"
+        wx:if="{{ item.type === 'list' }}">
+        <list displayName="{{ item.name }}"
+          data="{{ item.data }}"></list>
+      </view>
+      <view class="feed-list-wrapper"
+        wx:if="{{ item.type === 'feed-list' }}">
+        <feed-list displayName="{{ item.name }}"
+          data="{{ item.data }}">
+        </feed-list>
+      </view>
+    </block>
+  </scroll-view>
+</view>

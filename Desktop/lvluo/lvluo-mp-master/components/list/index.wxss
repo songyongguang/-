@@ -1,0 +1,14 @@
+@import './../ui-block.wxss';
+
+.ui-list-main {
+  display: flex;
+  margin-left: -30rpx;
+  margin-right: -30rpx;
+  overflow-x: auto;
+}
+.ui-list-item {
+  width: 690rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0rpx 20rpx;
+}

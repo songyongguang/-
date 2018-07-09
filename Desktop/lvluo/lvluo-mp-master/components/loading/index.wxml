@@ -1,0 +1,6 @@
+<view class="ui-loading">
+  <view class="weui-loading"></view>
+  <view class="ui-loading-messaga">
+    {{ message || '正在奋力加载' }}
+  </view>
+</view>

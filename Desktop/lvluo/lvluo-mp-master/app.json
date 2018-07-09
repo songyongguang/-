@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/contact/index",
+    "pages/news/index",
+    "pages/service/index",
+    "pages/contact/company",
+    "pages/contact/declare",
+    "pages/contact/joinus",
+    "pages/service/informationexpress",
+    "pages/service/agentinformationexpress",
+    "pages/service/clientinformationexpress",
+    "pages/service/result",
+    "pages/service/uploadphoto",
+    "pages/news/newsdetail",
+    "pages/service/credit",
+    "pages/news/servicedetail",
+    "pages/service/servicedetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "绿萝金融",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "rgba(0, 0, 0, .4)",
+    "selectedColor": "#1AAD19",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "common/icons/index.png",
+        "selectedIconPath": "common/icons/index-selected.png"
+      },
+      {
+        "pagePath": "pages/service/index",
+        "text": "服务",
+        "iconPath": "common/icons/service.png",
+        "selectedIconPath": "common/icons/service-selected.png"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "新闻",
+        "iconPath": "common/icons/news.png",
+        "selectedIconPath": "common/icons/news-selected.png"
+      },
+      {
+        "pagePath": "pages/contact/index",
+        "text": "我的",
+        "iconPath": "common/icons/contact.png",
+        "selectedIconPath": "common/icons/contact-selected.png"
+      }
+    ]
+  }
+}

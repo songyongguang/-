@@ -1,0 +1,11 @@
+/* pages/contact/declare.wxss */
+.page{
+padding: 10px 5%;
+}
+text{
+  display: block;
+  text-indent: 2rem;
+  line-height: 30px;
+  letter-spacing: 2rpx;
+  font-size: 18px;
+}

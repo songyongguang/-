@@ -1,0 +1,110 @@
+/* pages/service/informationexpress.wxss */
+.indexPage{
+display: flex;
+flex-direction: column;
+position:relative; 
+width: 100%;
+height: 100%;
+color: white;
+}
+.bgi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bgi image{
+  width: 100%;
+  height: 100%;
+}
+.content,.buttom{
+  position: relative;
+}
+.box{
+  position: relative;
+  width: 80%;
+  height: 150rpx;
+  margin:40rpx auto; 
+  border: 2rpx solid white;
+  z-index: 1;
+  border-bottom: none;
+}
+.box .text{
+ position: absolute;
+  width: 100%;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  /* width: 150px; */
+  text-align:center;
+  bottom: -.8em;
+  display:flex;
+}
+.box text{
+  margin: 0;
+  padding: 0;
+  line-height: 2em;
+  text-align: center;
+}
+.text:before, .text:after {
+  content: '';
+  display: block;
+  bottom: -3.0em;
+  border-top: 1px solid white;
+  position: relative;
+  width: 100%;
+  height: 0px;
+}
+.text:last-child:before {
+  left: 0px;
+}
+.text:last-child:after {
+  right: 0px;
+}
+.text-content {
+  padding: 0px 10px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 220rpx;
+ 
+}
+.content .entrance{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.content view:nth-child(1){
+  border-right: 2rpx solid white;
+}
+.content span{
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  background-color: white;
+   margin: 0 auto;
+
+}
+.content .entrance text{
+  display: block;
+   margin: 0 auto;
+}
+.content span image{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx 20rpx;
+}
+.buttom{
+  display:flex;
+  flex-direction: row;
+  width: 80%;
+  border:1px solid white;
+  border-radius: 5%;
+  margin: 50px auto;
+  padding: 20rpx 20rpx;
+}

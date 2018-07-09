@@ -1,0 +1,73 @@
+.ui-icon {
+  width: 60rpx;
+  height: 60rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ui-icon.location {
+  width: 44rpx;
+  height: 44rpx;
+  margin-top: -4rpx;
+}
+
+.ui-icon.expand {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: -2rpx;
+  transform: rotate(0deg);
+}
+
+.ui-icon.contract {
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: -2rpx;
+  transform: rotate(180deg);
+}
+
+.ui-icon.expand.animate,
+.ui-icon.contract.animate {
+  transition: transform .4s;
+}
+
+.ui-icon.people {
+  margin-top: -10rpx;
+}
+
+.ui-icon.mail {
+  margin-top: 10rpx;
+}
+
+.ui-icon.chat,
+.ui-icon.wechat,
+.ui-icon.phone {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.ui-icon.search {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.ui-icon.clear {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: -8rpx;
+}
+
+.ui-icon.pen {
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 14rpx;
+  margin-bottom: 2rpx;
+}
+
+.ui-icon.toast-success {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.ui-toast-inner-mess {
+  padding-top: 20rpx;
+}

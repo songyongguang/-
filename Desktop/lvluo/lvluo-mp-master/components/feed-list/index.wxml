@@ -1,0 +1,26 @@
+<!--components/feed/index.wxml-->
+<view class="ui-block ui-feed-list">
+  <view class="ui-block-header ui-feed-list-header"
+    wx:if="{{ displayName }}">
+    <view class='ui-block-title'>
+      {{ displayName }} 
+    </view>
+  </view>
+  <view class="ui-feed-list-main"
+    wx:if="{{ data && data.length > 0 }}">
+    <block wx:for="{{ data }}" wx:for-item="feed" wx:key="index">
+      <view class="ui-feed" show='{{showOrder}}'  data-id='{{feed.id}}' bindtap='gotodetail'>
+        <view class="ui-feed-title"> 
+          {{ feed.title }}
+        </view>
+        <view class="ui-feed-main">
+          <image src="{{ feed.photo }}"
+            mode="widthFix"></image>
+          <view class="ui-feed-info">
+            {{ feed.intro }}
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

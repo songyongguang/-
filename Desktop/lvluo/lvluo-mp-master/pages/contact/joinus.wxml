@@ -1,0 +1,43 @@
+<!--pages/contact/joinus.wxml-->
+<view class='page'>
+  <view class='top'>
+    <image src='image/joinus.png'></image>
+  </view>
+  <view class='content'>
+    <text style='text-indent:0rem'>尊敬的经纪人/朋友：</text>
+    <text>非常感谢您加入我们的团队，秉着“解决中小微企业融资难”的共同信念，搭建此平台，本着客观真实，梳理客户情况，形成调查报告；整合金融机构（银行和非银）贷款政策的风险偏好；根据客户调查报告和金融机构的贷款风险偏好的匹配度，有针对撮合</text>
+    <text>绿萝科技，恪守底线，合规经营，责任担当，努力建设成为中小微企业和金融机构信得过、靠得住的集散中心平台。</text>
+    <text>您可以是提供客户的经纪人，您也可以是金融机构负责贷款的客户经理，以客户为中心，只要您为客户提供了相应的服务，无论是经纪人还是客户经理，都能得到一定的佣金报酬。</text>
+    <text>来吧，我们欢迎您的加入.....</text>
+  </view>
+  <view class='buttom'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='name'>
+        <span>姓名</span>
+        <view>
+          <input name='name' type='text'></input>
+        </view>
+      </view>
+      <view class='select'>
+        <span>人员类别</span>
+        <view>
+          <input name='customerType'></input>
+        </view>
+      </view>
+      <view class='phone'>
+        <span>手机</span>
+        <view>
+        <input type='number' name='phone'></input>
+        </view>
+        <button bindgetphonenumber='' style='background-color:#1AAD19'>验证码</button>
+      </view>
+      <view class='check'>
+        <span>验证码</span>
+        <view>
+        <input type='number'></input>
+        </view>
+      </view>
+      <button formType="submit" class='confirm'>提交</button>
+    </form>
+  </view>
+</view>

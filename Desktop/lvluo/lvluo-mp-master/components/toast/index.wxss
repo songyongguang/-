@@ -1,0 +1,41 @@
+@import './../ui-icon.wxss';
+
+.ui-toast {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+.ui-toast-show {
+  z-index: 10;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.ui-toast-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 40rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+
+}
+
+
+.toast-theme-light .ui-toast-inner {
+  background: rgba(255,255,255, .7);
+}
+
+.toast-theme-dark .ui-toast-inner{
+  background: rgba(0,0,0, .7);
+}

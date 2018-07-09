@@ -1,0 +1,9 @@
+/* pages/service/credit.wxss */
+
+.newsPage{
+  width: 86%;
+  margin: 5% auto;
+}
+img{
+  margin: 0 auto;
+}

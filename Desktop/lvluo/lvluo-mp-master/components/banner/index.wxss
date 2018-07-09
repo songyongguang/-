@@ -1,0 +1,11 @@
+/* components/banner/index.wxss */
+@import './../ui-block.wxss';
+
+.ui-banner {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.ui-banner image {
+  display: block;
+  width: 100%;
+}

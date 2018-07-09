@@ -1,0 +1,28 @@
+<!--pages/service/uploadphoto.wxml-->
+<view class='uploadPage'>
+<form bindsubmit="formSubmit">
+  <view class='top'>
+    <view>
+      <span></span>
+      <text>住宅</text>
+    </view>
+    <view>
+      <image src='image/cretificate.jpg'></image>
+    </view>
+  </view>
+  <view class='content'>
+    <!-- <view  wx:for="{{chooseFiles}}">
+      <image data-index="{{index}}" src='{{item}}'></image>
+     
+    </view> -->
+    <view class="img" wx:for="{{chooseFiles}}" wx:for-item="item" wx:key="*this">
+      <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+    </view>
+    <image  src='image/upload.png' style='width:30%' bindtap='chooseImg'></image>
+  </view>
+  <view class='buttom'>
+    <button type='submit' formType="submit">上传</button>
+  </view>
+  </form>
+</view>

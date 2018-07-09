@@ -1,0 +1,4 @@
+<!--pages/service/servicedetail.wxml-->
+<view class='servicedetail'>
+<text>服务详情页</text>
+</view>
