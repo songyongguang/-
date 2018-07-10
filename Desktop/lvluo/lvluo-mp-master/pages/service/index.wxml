@@ -39,7 +39,6 @@
     <view>
       <a bindtap="information">资料速递</a>
     </view>
-
   <view>
     <view style='height:30px;line-height:30px;width:100%;display:flex;'>
       <span></span>

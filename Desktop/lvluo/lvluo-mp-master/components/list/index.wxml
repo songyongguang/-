@@ -1,26 +1,18 @@
 <!--components/list/index.wxml-->
 <view class="ui-block ui-list">
   <view class="ui-block-header ui-list-header"
-    wx:if="{{  displayName}}">
+    wx:if="{{ displayName }}">
     <view class='ui-block-title'>
       {{ displayName }} 
     </view>
   </view>
-   <view class="ui-list-main"
+  <view class="ui-list-main"
     wx:if="{{ data && data.length > 0 }}">
     <block wx:for="{{ data }}" wx:for-item="item" wx:key="index">
-      <view class="ui-list-item" data-id='{{item.id}}' bindtap='gotoservicedetail' >
-        <image src="{{ item.photo }}"
-          mode="widthFix"  data-show='{{data.showOrder}}'></image>
+      <view class="ui-list-item">
+        <image src="{{ item.coverImage || item.photo }}"
+          mode="widthFix"></image>
       </view>
     </block>
-  </view> 
-  <!-- <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{data}}">
-      <swiper-item>
-        <image src="{{item.photo}}" />
-      </swiper-item>
-    </block>
-  </swiper> -->
+  </view>
 </view>

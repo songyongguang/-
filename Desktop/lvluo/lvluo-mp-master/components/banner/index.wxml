@@ -1,31 +1,15 @@
 <!--components/banner/index.wxml-->
  <view class="ui-banner ui-block">
   <view class="ui-block-header ui-feed-list-header"
-    wx:if="{{ displayname }}">
+    wx:if="{{  displayName }}">
     <view class='ui-block-title'>
-      {{ displayname }} 
+      {{  displayName }} 
     </view>
   </view>
-  <view class="ui-block-body" bindtap='goto'>
-    <image src='{{ data.photo }}' title='{{ data.name }}'
-      mode='widthFix' data-show='{{data.showOrder}}' id='{{data.id}}' ></image>
-  </view> 
+   <view class="ui-block-body" bindtap='goto'>
+    <image src='{{ item.coverImage || item.photo  }}' title='{{ item.name }}'
+      mode='widthFix' data-show='{{item.showOrder}}' id='{{item.id}}' ></image>
+  </view>  
 </view> 
 
-<!-- <view class="ui-banner ui-block">
-  <view class="ui-block-header ui-feed-list-header"
-    wx:if="{{ categoryType}}">
-    <view class='ui-block-title'>
-      {{ data.categoryType }} 
-    </view>
-  </view>
-   <view class="ui-list-main"
-    wx:if="{{ data && data.length > 0 }}">
-    <block wx:for="{{ data }}" wx:for-item="item" wx:key="index">
-      <view class="ui-list-item" data-id='{{item.id}}' bindtap='goto' >
-        <image src="{{ item.coverImage }}"
-          mode="widthFix"  show='{{data.showOrder}}'></image>
-      </view>
-    </block>
-  </view> 
-</view> -->
+ 

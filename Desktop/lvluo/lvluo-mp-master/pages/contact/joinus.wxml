@@ -13,26 +13,26 @@
   <view class='buttom'>
     <form bindsubmit="formSubmit" bindreset="formReset">
       <view class='name'>
-        <span>姓名</span>
+        <span><p>姓</p><p>名</p><p>:</p></span>
         <view>
           <input name='name' type='text'></input>
         </view>
       </view>
       <view class='select'>
-        <span>人员类别</span>
+        <span><p>人</p><p>员</p><p>类</p><p>别</p><p>:</p></span>
         <view>
           <input name='customerType'></input>
         </view>
       </view>
       <view class='phone'>
-        <span>手机</span>
+        <span><p>手</p><p>机</p><p>:</p></span>
         <view>
         <input type='number' name='phone'></input>
         </view>
         <button bindgetphonenumber='' style='background-color:#1AAD19'>验证码</button>
       </view>
       <view class='check'>
-        <span>验证码</span>
+        <span><p>验</p><p>证</p><p>码</p><p>:</p></span>
         <view>
         <input type='number'></input>
         </view>

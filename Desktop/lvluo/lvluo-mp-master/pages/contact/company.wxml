@@ -30,9 +30,9 @@
               <input type='text' name='name' placeholder='怎么称呼您'></input>
           </view>
           <view class="radio">
-            <radio-group class="radio-group" bindchange="radioChange">
+            <radio-group class="radio-group" name="sex" bindchange="radioChange">
               <label wx:for="{{items}}">
-                <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                <radio value="{{item.name}}"  checked="{{item.checked}}"/>{{item.value}}
               </label>
             </radio-group>
           </view>

@@ -1,11 +1,11 @@
-<!--components/feed/index.wxml-->
+<!--components/news/index.wxml-->
 <view class="ui-block ui-feed-list">
-  <view class="ui-block-header ui-feed-list-header"
+  <!-- <view class="ui-block-header ui-feed-list-header"
     wx:if="{{ displayName }}">
     <view class='ui-block-title'>
       {{ displayName }} 
     </view>
-  </view>
+  </view> -->
   <view class="ui-feed-list-main"
     wx:if="{{ data && data.length > 0 }}">
     <block wx:for="{{ data }}" wx:for-item="item" wx:key="index">
@@ -24,3 +24,4 @@
     </block>
   </view>
 </view>
+

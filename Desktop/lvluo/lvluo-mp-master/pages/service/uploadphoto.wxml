@@ -17,7 +17,7 @@
     </view> -->
     <view class="img" wx:for="{{chooseFiles}}" wx:for-item="item" wx:key="*this">
       <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
-      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+      <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">x</view>
     </view>
     <image  src='image/upload.png' style='width:30%' bindtap='chooseImg'></image>
   </view>

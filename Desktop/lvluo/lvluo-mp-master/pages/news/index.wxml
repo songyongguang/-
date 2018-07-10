@@ -15,15 +15,21 @@
         duration="1000"
         status="success"
         theme="dark"></toast>
-    <block wx:if="{{ pageData && pageData.length > 0 }}"
-      wx:for="{{ pageData }}" wx:for-item="item" wx:key="index">
+     <view class="feed-list-wrapper"
+      wx:if="{{ news && news.length > 0}}">
+      <!-- <text>NEWS</text> -->
+      <feed-list displayName="绿萝头条"
+        data="{{ news }}">
+      </feed-list>
+    </view>
       <view class="feed-list-wrapper"
-        wx:if="{{ item.type === 'feed-list' }}" data-id='{{feed.id}}'>
-        <feed-list displayName="{{ item.displayName }}"
-          data="{{ item.data }}" data-id='{{feed.id}}'>
-        </feed-list>
-      </view>
-    </block>
+      wx:if="{{ news && news.length > 0}}">
+      <!-- <text>NEWS</text> -->
+      <feed-list displayName="绿萝新闻"
+        data="{{ news }}">
+      </feed-list>
+    </view>
+
 
     <!-- failed -->
     <toast visible="{{ fetchStatus == 'fail' }}"

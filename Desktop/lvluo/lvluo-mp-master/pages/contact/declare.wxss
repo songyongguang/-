@@ -1,6 +1,6 @@
 /* pages/contact/declare.wxss */
 .page{
-padding: 10px 5%;
+padding: 10px 0;
 }
 text{
   display: block;

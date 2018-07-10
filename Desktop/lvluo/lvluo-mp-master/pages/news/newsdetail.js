@@ -4,16 +4,15 @@ import DataGet from './../../utils/data-store'
 
 const PAGE_ID = 'page/news'
 const MC_KEY = `${PAGE_ID}_MC`
-const PAGE_API = '/api/page/news'
+const NEWS_API = '/lvluo-api/v1/index/news'
 
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     fetchStatus: DEFAULT,
-    pageData: null
+    news: null
   },
   
   /**
@@ -26,18 +25,17 @@ Page({
       fetchStatus: PENDING
     })
     // api数据 的调用
-    DataGet(PAGE_ID, PAGE_API).then((res) => {
-      console.log('res.data', res.data)
-      this.setData({
-        fetchStatus: SUCCESS,
-        pageData: res.data[postId],
+    DataGet(`${PAGE_ID}/news`, NEWS_API)
+      .then((res) => {
+        this.setData({
+          news:res.data,
+          fetchStatus: SUCCESS
+        })
+        console.log(res.data)
       })
-      console.log(res.data[postId])
-    }).catch((err) => {
-      this.setData({
-        fetchStatus: FAIL
+      .catch((err) => {
+        console.error(err)
       })
-    })
   },
   // URI: /v1/api / news / type 使用这个api
   /**
@@ -86,6 +84,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+
+  },
+  fetchData: function () {
 
   }
 })

@@ -4,7 +4,7 @@ import DataGet from './../../utils/data-store'
 
 const PAGE_ID = 'page/service'
 const MC_KEY = `${PAGE_ID}_MC`
-const PAGE_API = '/api/page/server'
+const PAGE_API = '/v1/product/type'
 
 
 Page({
@@ -14,7 +14,7 @@ Page({
    */
   data: {
     fetchStatus: DEFAULT,
-    pageData: null,
+    server: null,
     "img": [
       {
         "id": 1,
@@ -61,31 +61,7 @@ Page({
       complete: function (res) { },
     })
   },
-  // server1:function(){
-  //   wx.navigateTo({
-  //     url: '../service/credit',
-  //     success: function(res) {},
-  //     fail: function(res) {},
-  //     complete: function(res) {},
-  //   })
-  // },
-  // server2: function () {
-  //   wx.navigateTo({
-  //     url: '',
-  //     success: function (res) { },
-  //     fail: function (res) { },
-  //     complete: function (res) { },
-  //   })
-  // },
-  // server3: function () {
-  //   wx.navigateTo({
-  //     url: '',
-  //     success: function (res) { },
-  //     fail: function (res) { },
-  //     complete: function (res) { },
-  //   })
-  // },
-
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -93,17 +69,16 @@ Page({
     this.setData({
       fetchStatus: PENDING
     })
-    DataGet(PAGE_ID, PAGE_API).then((res) => {
-      console.log('res.data', res.data)
-      this.setData({
-        fetchStatus: SUCCESS,
-        pageData: res.data
+    DataGet(`${PAGE_ID}/server`, NEWS_API)
+      .then((res) => {
+        this.setData({
+         server: res.data,
+          fetchStatus: SUCCESS
+        })
       })
-    }).catch((err) => {
-      this.setData({
-        fetchStatus: FAIL
+      .catch((err) => {
+        console.error(err)
       })
-    })
     var that=this 
     wx.login({
      success:function(){

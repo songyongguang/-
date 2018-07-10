@@ -21,8 +21,8 @@ Component({
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
-    duration: 1000
-
+    duration: 1000,
+    image: [{ photo: "./image/introduce.png" }, { photo: "./image/introduce.png" }, { photo: "./image/introduce.png" }, { photo: "./image/introduce.png" }]
   },
 
   /**

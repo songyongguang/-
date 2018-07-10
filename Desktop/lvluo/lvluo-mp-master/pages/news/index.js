@@ -1,10 +1,10 @@
-// pages/news/index.js
+
 import { PENDING, DEFAULT, FAIL, SUCCESS } from './../../utils/async-status.js'
 import DataGet from './../../utils/data-store'
 
-const PAGE_ID = 'page/news'
+const PAGE_ID = 'page/index'
 const MC_KEY = `${PAGE_ID}_MC`
-const PAGE_API = '/api/page/news'
+const NEWS_API = '/lvluo-api/v1/news/home'
 
 Page({
 
@@ -13,7 +13,7 @@ Page({
    */
   data: {
     fetchStatus: DEFAULT,
-    pageData: null
+    news: null
   },
 
   /**
@@ -23,64 +23,52 @@ Page({
     this.setData({
       fetchStatus: PENDING
     })
-    // api数据 的调用
-    DataGet(PAGE_ID, PAGE_API).then((res) => {
-      console.log('res.data', res.data)
-      this.setData({
-        fetchStatus: SUCCESS,
-         pageData: res.data,
-        // pageData: {
-        //   format: 'json',
-        //   maxId: res.data.maxId,
-        //   categoryId: res.data.cateid,
-        //   pageCounts: 10
-        // },
+    // 加载 news
+    DataGet(`${PAGE_ID}/news`, NEWS_API)
+      .then((res) => {
+        this.setData({
+          news: res.data,
+          fetchStatus: SUCCESS
+        })
       })
-    }).catch((err) => {
-      this.setData({
-        fetchStatus: FAIL
+      .catch((err) => {
+        console.error(err)
       })
-    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    DataGet(PAGE_ID, PAGE_API).then((res) => {
-      console.log('res.data', res.data)
-      this.setData({
-        fetchStatus: SUCCESS,
-        pageData: res.data,
-      })
-    })
+
   },
 
   /**
@@ -94,6 +82,13 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
+  },
+
+  /**
+   * 加载数据
+   */
+  fetchData: function () {
+
   }
 })

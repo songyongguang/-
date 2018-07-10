@@ -48,6 +48,9 @@ text{
   margin-right: 5%;
   height: 50px;
   line-height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .buttom .check span{
   width: 20%;
@@ -55,6 +58,7 @@ text{
   margin-right: 5%;
   height: 50px;
   line-height: 50px;
+  
 }
 .confirm{
   width: 60%;

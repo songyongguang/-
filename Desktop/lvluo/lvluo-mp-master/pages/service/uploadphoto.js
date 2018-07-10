@@ -57,7 +57,7 @@ Page({
   deleteImg: function (e) {
     var chooseFiles = this.data.chooseFiles;
     var index = e.currentTarget.dataset.index;
-    imgs.splice(index, 1);
+    chooseFiles.splice(index, 1);
     this.setData({
       chooseFiles: chooseFiles
     });
